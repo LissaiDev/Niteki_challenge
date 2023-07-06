@@ -15,11 +15,12 @@ const Details = () => {
   const [count, setCount] = useState(1);
   const [data, setData] = useState({});
   const { id } = useParams();
+  const index = Number(id)
   const {cartItems,setCartItems} = useContext(CartContext);
   useEffect(() => {
-    id > 0 && id <= content.length && setData(content[id - 1]);
-    setData(content[id - 1]);
-  }, [id]);
+    index > 0 && index <= content.length && setData(content[index - 1]);
+    setData(content[index - 1]);
+  }, [index]);
   return (
     <>
       {data ? (
@@ -90,7 +91,7 @@ const Details = () => {
               <button className="w-5/12 border p-3 rounded-full bg-main text-white hover:border-main hover:bg-white hover:text-main transition-all duration-300 mr-2">
                 Buy now
               </button>
-              <button className="w-5/12 border border-main p-3 rounded-full text-main hover:bg-main hover:text-white transition-all duration-300" onClick={()=> handleAddToCart(id, cartItems, setCartItems)}>
+              <button className="w-5/12 border border-main p-3 rounded-full text-main hover:bg-main hover:text-white transition-all duration-300" onClick={()=> handleAddToCart(index, cartItems, setCartItems)}>
                 Add to cart
               </button>
             </div>

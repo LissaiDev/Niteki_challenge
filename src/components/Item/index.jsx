@@ -18,8 +18,7 @@ const Item = ({ name, image, price, description, index }) => {
     lottieRef.current.goToAndPlay(0, true);
   };
   return (
-    <motion.a
-      href="#"
+    <motion.div
       onClick={(e) => e.preventDefault()}
       className="w-full sm:w-6/12 lg:w-4/12 xl:w-3/12 p-1 z-10 mb-3 relative group"
       initial={{ opacity: 0, translateX: -100 }}
@@ -54,7 +53,7 @@ const Item = ({ name, image, price, description, index }) => {
           Add to cart
         </p>
       </button>
-    </motion.a>
+    </motion.div>
   );
 };
 

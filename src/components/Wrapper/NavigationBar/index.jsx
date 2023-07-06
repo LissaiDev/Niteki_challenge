@@ -22,12 +22,12 @@ const NavigationBar = () => {
           <li key={item.key}>
             {item.children ? (
               <Dropdown menu={{ items: item.children }}>
-                <a onClick={(e) => e.preventDefault()}>
+                <div>
                   <Space>
                     {item.label}
                     <DownOutlined />
                   </Space>
-                </a>
+                </div>
               </Dropdown>
             ) : (
               item.label
