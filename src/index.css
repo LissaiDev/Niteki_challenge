@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .button {
+      @apply bg-main text-white px-5 py-2 rounded-full mt-8 hover:bg-white hover:text-main transition-all duration-200;
+    }
+  }
