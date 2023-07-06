@@ -8,10 +8,14 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import content from "../../utils/content";
 import Error from "../../components/Error";
+import { handleAddToCart } from "../../utils/handleCart";
+import { useContext } from "react";
+import CartContext from "../../utils/CartContext";
 const Details = () => {
   const [count, setCount] = useState(1);
   const [data, setData] = useState({});
   const { id } = useParams();
+  const {cartItems,setCartItems} = useContext(CartContext);
   useEffect(() => {
     id > 0 && id <= content.length && setData(content[id - 1]);
     setData(content[id - 1]);
@@ -86,7 +90,7 @@ const Details = () => {
               <button className="w-5/12 border p-3 rounded-full bg-main text-white hover:border-main hover:bg-white hover:text-main transition-all duration-300 mr-2">
                 Buy now
               </button>
-              <button className="w-5/12 border border-main p-3 rounded-full text-main hover:bg-main hover:text-white transition-all duration-300">
+              <button className="w-5/12 border border-main p-3 rounded-full text-main hover:bg-main hover:text-white transition-all duration-300" onClick={()=> handleAddToCart(id, cartItems, setCartItems)}>
                 Add to cart
               </button>
             </div>

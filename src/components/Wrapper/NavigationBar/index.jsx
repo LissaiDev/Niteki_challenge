@@ -3,8 +3,12 @@ import navigationList from "../../../utils/navigationList";
 import { MenuOutlined, DownOutlined } from "@ant-design/icons";
 import { Dropdown, Space } from "antd";
 import { Link } from "react-router-dom";
+import { Badge } from "antd";
+import { useContext } from "react";
+import CartContext from "../../../utils/CartContext";
 const NavigationBar = () => {
   const items = navigationList;
+  const {cartItems} = useContext(CartContext)
   return (
     <nav className="container mx-auto px-3 flex justify-between items-center py-1">
       <Link
@@ -31,12 +35,14 @@ const NavigationBar = () => {
           </li>
         ))}
       </ul>
-      <a href="#">
-      <Space>
-            <ShoppingCartOutlined />
-            <span>Cart</span>
-          </Space>
-      </a>
+      <Link to={"/cart"}>
+        <Space>
+          <Badge showZero count={cartItems.length}>
+            <ShoppingCartOutlined className="text-2xl"/>
+          </Badge>
+          <span>Cart</span>
+        </Space>
+      </Link>
       <Dropdown
         className="cursor-pointer md:hidden"
         menu={{

@@ -4,8 +4,12 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import CartContext from "../../utils/CartContext";
+import { handleAddToCart } from "../../utils/handleCart";
 // eslint-disable-next-line react/prop-types
 const Item = ({ name, image, price, description, index }) => {
+  const {cartItems,setCartItems} = useContext(CartContext);
   const lottieRef = useRef();
   useEffect(() => {
     lottieRef.current.pause();
@@ -45,7 +49,7 @@ const Item = ({ name, image, price, description, index }) => {
         </div>
         <p className="text-sm">{description}</p>
       </Link>
-      <button className="py-2 px-3 group/button border-main rounded-full border hover:bg-main mt-2 transition-all duration-200">
+      <button className="py-2 px-3 group/button border-main rounded-full border hover:bg-main mt-2 transition-all duration-200" onClick={() => handleAddToCart(index, cartItems, setCartItems)}>
         <p className="text-sm text-main group-hover/button:text-white">
           Add to cart
         </p>
