@@ -8,7 +8,10 @@ export default {
       "secondary": "#ecedea",
       "main_light": "#5aaa55",
       "white": "#fff",
-      "call-to-action": "#faf0e4"
+      "call-to-action": "#faf0e4",
+      "black": "#000",
+      "grey": "#c4c4c4",
+      "muted":"#b4b4b4",
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],

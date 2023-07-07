@@ -14,7 +14,7 @@ const Home = () => {
       
         >
           <h1 className="text-6xl text-main">
-            Grap up to 50% off on selected headphone
+            Grab up to 50% off on selected headphone
           </h1>
           <button className="button">Buy now</button>
         </div>

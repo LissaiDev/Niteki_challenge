@@ -6,7 +6,7 @@ import Total from "../../components/Total";
 const Cart = () => {
   const { cartItems, setCartItems } = useContext(CartContext);
   return (
-    <div className="flex flex-wrap container mx-auto md:p-3 ">
+    <div className="flex flex-wrap container mx-auto md:p-3 min-h-screen">
       <div className="md:w-8/12 w-11/12">
         <div className="flex justify-between mb-4">
           <h1 className="text-3xl">Cart</h1>

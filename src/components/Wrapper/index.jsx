@@ -5,7 +5,7 @@ import NavigationBar from "./NavigationBar";
 
 const Wrapper = () => {
   return (
-    <div className="relative">
+    <div className="">
       <Header />
       <NavigationBar />
       <Outlet />
