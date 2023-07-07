@@ -48,7 +48,7 @@ pnpm run dev
 
 ## Contato
 
-Se você tiver alguma dúvida, sugestão ou precisar de suporte, sinta-se à vontade para entrar em contato conosco. Você pode nos alcançar através do seguinte e-mail: [lissadev@outlook.com](mailto:lissaidev@outlook.com).
+Se você tiver alguma dúvida, sugestão ou precisar de suporte, sinta-se à vontade para entrar em contato comigo. Você pode me alcançar através do seguinte e-mail: [lissadev@outlook.com](mailto:lissaidev@outlook.com).
 
 ## Live site
 
